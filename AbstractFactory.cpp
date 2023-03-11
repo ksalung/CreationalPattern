@@ -11,9 +11,9 @@ void ClientCode(const AbstractFotory& factory)
 	delete product_B;
 }
 
-int main()
-{
-	ConcreteFactory1* f1 = new ConcreteFactory1();
-	ClientCode(*f1);
-	delete f1;
-}
+//int main()
+//{
+//	ConcreteFactory1* f1 = new ConcreteFactory1();
+//	ClientCode(*f1);
+//	delete f1;
+//}
