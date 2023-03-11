@@ -11,46 +11,9 @@ void ClientCode(const AbstractFotory& factory)
 	delete product_B;
 }
 
-class Concrete1 : AbstractProductA {
-	std::string usefunction() const override
-	{
-		return "Concrete1:usefunction()";
-	}
-};
-
-class Concrete2 : AbstractProductA {
-std::string usefunction() const override
+int main()
 {
-	return "Concrete2:usefunction()";
+	ConcreteFactory1* f1 = new ConcreteFactory1();
+	ClientCode(*f1);
+	delete f1;
 }
-};
-
-class ConcreteB1 :AbstractProductB {
-	std::string usefunctionB() const override
-	{
-		return "result product 2";
-	}
-
-	std::string usefunctionB_2(const AbstractProductA & col) const override 
-	{
-	const std::string ret = col.usefunction();
-	return "B1 result is " + ret;
-	}
-};
-
-	class ConcreteFactory1 : AbstractFotory
-	{
-		AbstractProductA* createProA() const override {
-			return new ConcreteA1();
-		}
-		AbstractProductB* createProB() const override {
-			return new ConcreteB1();
-		}
-	};
-
-	int main()
-	{
-		ConcreteA1* f1 = new ConcreteA1();
-		ClientCode(*f1);
-		delete f1;
-	}

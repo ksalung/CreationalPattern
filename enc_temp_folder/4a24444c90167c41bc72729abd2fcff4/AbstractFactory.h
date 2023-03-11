@@ -9,14 +9,14 @@ public:
 	virtual std::string usefunction()const = 0;
 };
 
-class ProductA1 :public AbstractProductA {
+class ConcreteA1 :public AbstractProductA {
 	std::string usefunction() const override
 	{
 		return "Concrete1:usefunction()";
 	}
 };
 
-class ProductA2 :public AbstractProductA {
+class ConcreteA2 :public AbstractProductA {
 	std::string usefunction() const override
 	{
 		return "Concrete2:usefunction()";
@@ -30,7 +30,7 @@ public:
 	virtual std::string usefunctionB_2(const AbstractProductA&col)const = 0;
 };
 
-class ProductB1 :public AbstractProductB {
+class ConcreteB1 :public AbstractProductB {
 
 	std::string usefunctionB() const override
 	{
@@ -54,9 +54,9 @@ public:
 class ConcreteFactory1 :public AbstractFotory
 {
 	AbstractProductA* createProA() const override {
-		return new ProductA1();
+		return new ConcreteA1();
 	}
 	AbstractProductB* createProB() const override {
-		return new ProductB1();
+		return new ConcreteB1();
 	}
 };
