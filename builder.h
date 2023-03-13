@@ -7,7 +7,7 @@ class product1
 {
 public:
 	vector<int> vector;
-	void Listget() const {
+	void list_get() const {
 		std::cout << "Product get :";
 		for (int i = 0; i < vector.size(); i++)
 		{
@@ -66,7 +66,7 @@ public:
 	}
 };
 
-class Director 
+class director 
 {
 private:
 	_builder* builder;
@@ -81,7 +81,7 @@ public:
 		this->builder->product_partA();
 	}
 
-	void buildFull_product()
+	void buildfull_product()
 	{
 		this->builder->product_partA();
 		this->builder->product_partB();

@@ -1,7 +1,7 @@
 #include "builder.h"
 
 
-void Clientcode(Director& director)
+void Clientcode(director& director)
 {
 	concrete_builder* builder = new concrete_builder();
 	director.set_builder(builder);
@@ -10,14 +10,14 @@ void Clientcode(Director& director)
 
 
 	product1* product = builder->create_product();
-	product->Listget();
+	product->list_get();
 	delete product;
 
 	std::cout << "full function : " << endl;
-	director.buildFull_product();
+	director.buildfull_product();
 
 	product = builder->create_product();
-	product->Listget();
+	product->list_get();
 	delete product;
 
 	std::cout << "custom product : " << endl;
@@ -25,13 +25,13 @@ void Clientcode(Director& director)
 	builder->product_partB();
 	builder->product_partC();
 	product = builder->create_productA();
-	product->Listget();
+	product->list_get();
 	delete product;
 }
 
 //int main()
 //{
-//	Director* director = new Director();
+//	director* director = new director();
 //	Clientcode(*director);
 //	delete director;
 //	return 0;
