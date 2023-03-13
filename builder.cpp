@@ -3,36 +3,36 @@
 
 void Clientcode(Director& director)
 {
-	ConcreteBuilder* builder = new ConcreteBuilder();
+	concrete_builder* builder = new concrete_builder();
 	director.set_builder(builder);
 	std::cout << "normal line : " << endl;
-	director.buildviableProduct();
+	director.buildviable_product();
 
 
-	Product1* product = builder->createProduct();
+	product1* product = builder->create_product();
 	product->Listget();
 	delete product;
 
 	std::cout << "full function : " << endl;
-	director.buildFullProduct();
+	director.buildFull_product();
 
-	product = builder->createProduct();
+	product = builder->create_product();
 	product->Listget();
 	delete product;
 
 	std::cout << "custom product : " << endl;
-	builder->ProcutPartA();
-	builder->ProcutPartB();
-	builder->ProcutPartC();
-	product = builder->createProduct();
+	builder->product_partA();
+	builder->product_partB();
+	builder->product_partC();
+	product = builder->create_productA();
 	product->Listget();
 	delete product;
 }
 
-int main()
-{
-	Director* director = new Director();
-	Clientcode(*director);
-	delete director;
-	return 0;
-}
+//int main()
+//{
+//	Director* director = new Director();
+//	Clientcode(*director);
+//	delete director;
+//	return 0;
+//}

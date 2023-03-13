@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractFactory.h" />
+    <ClInclude Include="abstract_factory.h" />
     <ClInclude Include="builder.h" />
+    <ClInclude Include="factory_method.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbstractFactory.cpp" />
+    <ClCompile Include="abstract_factory.cpp" />
     <ClCompile Include="builder.cpp" />
+    <ClCompile Include="factory_method.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

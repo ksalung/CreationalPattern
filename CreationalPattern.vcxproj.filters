@@ -15,18 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractFactory.h">
+    <ClInclude Include="builder.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="builder.h">
+    <ClInclude Include="factory_method.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract_factory.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbstractFactory.cpp">
+    <ClCompile Include="abstract_factory.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="builder.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="factory_method.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

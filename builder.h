@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-class Product1
+class product1
 {
 public:
 	vector<int> vector;
@@ -20,47 +20,47 @@ public:
 	}
 };
 
-class Builder
+class _builder
 {
 public:
-	virtual void ProcutPartA() const = 0;
-	virtual void ProcutPartB() const = 0;
-	virtual void ProcutPartC() const = 0;
+	virtual void product_partA() const = 0;
+	virtual void product_partB() const = 0;
+	virtual void product_partC() const = 0;
 };
 
-class ConcreteBuilder : public Builder {
+class concrete_builder : public _builder {
 private:
-	Product1* product;
+	product1* product;
 public:
-	ConcreteBuilder()
+	concrete_builder()
 	{
 		this->reset();
 	}
-	~ConcreteBuilder()
+	~concrete_builder()
 	{
 		delete product;
 	}
 	void reset()
 	{
-		this->product = new Product1();
+		this->product = new product1();
 	}
 
-	void ProcutPartA() const override
+	void product_partA() const override
 	{
 		this->product->vector.push_back(1);
 	}
-	void ProcutPartB() const override
+	void product_partB() const override
 	{
 		this->product->vector.push_back(2);
 	}
-	void ProcutPartC() const override
+	void product_partC() const override
 	{
 		this->product->vector.push_back(3);
 	}
 
-	Product1* createProduct()
+	product1* create_product()
 	{
-		Product1* result = this->product;
+		product1* result = this->product;
 		this->reset();
 		return result;
 	}
@@ -69,23 +69,23 @@ public:
 class Director 
 {
 private:
-	Builder* builder;
+	_builder* builder;
 public:
-	void set_builder(Builder* builder)
+	void set_builder(_builder* builder)
 	{
 		this->builder = builder;
 	}
 
-	void buildviableProduct()
+	void buildviable_product()
 	{
-		this->builder->ProcutPartA();
+		this->builder->product_partA();
 	}
 
-	void buildFullProduct()
+	void buildFull_product()
 	{
-		this->builder->ProcutPartA();
-		this->builder->ProcutPartB();
-		this->builder->ProcutPartC();
+		this->builder->product_partA();
+		this->builder->product_partB();
+		this->builder->product_partC();
 	}
 };
 
