@@ -30,6 +30,6 @@ public:
 		return _value;
 	}
 };
-singleton* singleton::_singleton = nullptr;
+
 
 

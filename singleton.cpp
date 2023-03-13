@@ -1,7 +1,7 @@
 #include "singleton.h"
 
 
-
+singleton* singleton::_singleton = nullptr;
 singleton* singleton::_getInstance(const string& value)
 {
 	if (_singleton == nullptr)
