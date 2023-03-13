@@ -24,7 +24,7 @@ void Clientcode(director& director)
 	builder->product_partA();
 	builder->product_partB();
 	builder->product_partC();
-	product = builder->create_productA();
+	product = builder->create_product();
 	product->list_get();
 	delete product;
 }
