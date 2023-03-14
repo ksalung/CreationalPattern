@@ -18,10 +18,10 @@ void threadrun()
 }
 
 
-int main()
-{
-	std::thread _run(threadrun);
-	_run.join();
-
-	return 0;
-}
+//int main()
+//{
+//	std::thread _run(threadrun);
+//	_run.join();
+//
+//	return 0;
+//}
